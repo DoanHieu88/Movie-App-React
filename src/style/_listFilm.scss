@@ -1,0 +1,31 @@
+@import './variable';
+
+.movie-hot{
+    margin: 130px auto;
+    width: 1350px;
+    color: $color-default;
+    
+    h3{
+        height: 20px;
+        border: none;
+        margin: 10px 0;
+        color: $color-border;
+        font-weight: 900;
+        font-size: 30px;
+        text-shadow: 5px 5px 5px rgb(14, 13, 13);
+    }
+
+    hr{
+        width: 100%;
+        border-bottom: solid 1px;   
+        color: $color-border;
+        background-color: $color-border;
+        margin: 10px 0;
+    }
+
+    .list-film{
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        grid-gap: 9px;
+    }
+}

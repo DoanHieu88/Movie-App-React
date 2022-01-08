@@ -1,0 +1,65 @@
+@import './variable';
+@import './mixin';
+
+header{
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 74px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $color-component;
+    top: 0;
+    z-index: 1;
+    
+    button{
+       @include btn-radius;
+    }
+
+    a{
+        text-decoration: none;
+    }
+    .heading{
+        font-size: 30px;
+        font-weight: 900;
+        color: $color-default;
+    }
+
+    .search-control{
+        align-items: center;
+        width: 480px;
+        height: 100%;
+        display: flex;
+
+        input{
+            width: 470px;
+            height: 48px;
+            border-radius: 10px;
+            padding: 10px;
+            border: solid #333;
+            font-size: 17px;
+        }
+
+        .search{
+            position: relative;
+            right: 39px;
+            background-color: $color-default;
+            border: none;
+            color: $color-btn;
+            cursor: pointer;
+            font-size: 20px;
+        }
+    }
+
+    img{
+       width: 50px;
+       height: 50px;
+       border-radius: 50%;
+       position: relative;
+       right: 8px;
+       top: -10px;
+       cursor: pointer;
+    }
+}

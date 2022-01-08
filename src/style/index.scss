@@ -1,0 +1,21 @@
+@import url(./_loading.scss);
+@import './footer';
+@import './header';
+@import './variable';
+@import './listFilm';
+@import './movieCard';
+@import './movieDetail';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-size: 22px;
+    line-height: 1.5px;
+    font-family: 'Poppins', sans-serif;
+    background-color: $bgr-color;
+}

@@ -1,0 +1,110 @@
+@import './variable';
+
+.movie-detail-container{
+    margin: 90px auto;
+    width: 95%;
+    height: auto;
+    background-color: $color-component;
+    display: flex;
+    justify-content: space-between;
+    color: $color-default;
+
+    .left-content{
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        line-height: 35px;
+        text-align: center;
+        padding: 10px 20px;
+
+        .title-film{
+            color: $color-border;
+            font-size: 40px;
+            font-weight: 1000;
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        .actors{
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            margin: 10px 0;
+
+            .actor-heading{
+                margin-right: 10px;
+                color: rgb(221, 17, 170);
+            }
+
+            .actor{
+                font-size: 20px;
+                color: rgb(62, 31, 201);
+            }
+        }
+
+        .movie-summary{
+            font-size: 34px;
+            color: rgb(233, 12, 12);
+            margin: 20px 0;
+        }
+
+        .plot{
+            font-size: 15px;
+            font-weight: 500;
+
+        }
+    }
+
+    .right-content{
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+
+        img{
+            width: 90%;
+            height: 500px;
+            border-radius: 10px;
+            border: solid 3px $color-border;
+            margin: 20px 5px;
+        }
+        
+        .note-film{
+            color: #fff;
+            display: flex;
+            
+            h6{
+                margin: 10px 10px;
+                font-size: 18px;
+                font-weight: 300;
+            }
+
+            .btn-primary{
+                width: 120px;
+                height: 45px;
+                text-align: center;
+                font-weight: 600;
+                margin: 10px 10px;
+            }
+        }
+
+        .rate{
+            display: flex;
+            height: 30px;
+            line-height: 30px;
+            margin: 10px 0 20px 10px;
+            justify-content: start;
+            font-weight: 600;
+
+            .ratings{
+                margin: 0 20px;
+            }
+        }
+        .fill{
+            color: yellow;
+        }:first-child{
+            margin-left: 7px;
+        }
+
+
+    }
+}
