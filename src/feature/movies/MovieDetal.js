@@ -1,20 +1,21 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import { asyncMovieDetail } from './movieSlice';
+import { asyncMovieDetail, loaderMovie, movieDetail } from './movieSlice';
 import Loading from '../../component/Loading'
 
 export default function MovieDetal() {
     const { imdbID } = useParams();
     const dispatch = useDispatch();
+    const data = useSelector(movieDetail);
+    const checkLoader = useSelector(loaderMovie)
+    const { Title, Year, Runtime, Poster, imdbRating, Actors, Plot } = data;
+
     useEffect(() => {
         dispatch(asyncMovieDetail(imdbID))
-    }, [dispatch])
-    const data = useSelector(state => state.movie);
-    const { movieDetail } = data;
-    const { Title, Year, Runtime, Poster, imdbRating, Actors, Plot } = movieDetail;
+    }, [dispatch, imdbID])
 
-    if (data.loading) {
+    if (checkLoader) {
         return <Loading />
     } else {
         return (
@@ -50,4 +51,5 @@ export default function MovieDetal() {
             </div>
         )
     }
+
 }

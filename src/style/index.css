@@ -15,7 +15,7 @@
 }
 
 .footer .heading-footer {
-  margin: 50px auto;
+  margin: 30px auto;
   color: #fff;
   font-size: 30px;
   font-weight: 600;
@@ -80,7 +80,7 @@ header a {
 header .heading {
   font-size: 30px;
   font-weight: 900;
-  color: #fff;
+  color: rgba(59, 13, 245, 0.884);
 }
 
 header .search-control {
@@ -141,10 +141,10 @@ header img {
 
 .movie-hot hr {
   width: 100%;
-  border-bottom: solid 1px;
+  border-bottom: solid 3px;
   color: #baad44;
   background-color: #baad44;
-  margin: 10px 0;
+  margin: 20px 0;
 }
 
 .movie-hot .list-film {
@@ -358,6 +358,12 @@ header img {
 
 .movie-detail-container .right-content :first-child {
   margin-left: 7px;
+}
+
+.not-found {
+  font-size: 40px;
+  color: red;
+  font-weight: 800;
 }
 
 * {
