@@ -1,35 +1,19 @@
 import React, { Fragment } from "react";
-import MovieCard from "./MovieCard";
-import { useSelector } from "react-redux";
-import { movieData, sliderMovie } from "./movieSlice";
+import { useSelector } from 'react-redux';
+import Cartoon from "../allMovie/Cartoon";
+import Movies from "../allMovie/Movies";
+import SearchMovie from "../allMovie/SearchMovie";
+import { searchMovie } from "./movieSlice";
+
 
 export default function MoviesList() {
-  const moviesData = useSelector(movieData);
-  const cartoonData = useSelector(sliderMovie);
-  const movies = moviesData.Search;
-  const cartoons = cartoonData.Search
+  const searchMovieData = useSelector(searchMovie);
 
   return (
     <Fragment>
-      <div className="movie-hot">
-        <h3>Film Hot</h3>
-        <hr />
-        <div className="list-film">
-          {movies?.map((movie, index) => {
-            return <MovieCard data={movie} key={index} />;
-          })}
-        </div>
-      </div>
-      <div className="movie-hot">
-        <h3>Cartoon</h3>
-        <hr />
-        <div className="list-film">
-          {cartoons?.map((cartoon, index) => {
-            return <MovieCard data={cartoon} key={index} />;
-          })}
-        </div>
-      </div>
-
+      {searchMovieData.Search ? (<SearchMovie />) : null}
+      <Movies />
+      <Cartoon />
     </Fragment>
   );
 }
